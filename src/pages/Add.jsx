@@ -22,7 +22,7 @@ function Add() {
     } = useForm()
 
     const onSubmit = (obj) => {
-        axios.post('http://localhost:3000/api', {...obj, photo : image})
+        axios.post('http://localhost:8000/api', {...obj, photo : image})
             .then(res => console.log(res))
     }
 

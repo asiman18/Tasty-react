@@ -13,7 +13,7 @@ function Edit() {
     const [image, setImage] = useState(null);
 
     useEffect(() => {
-        axios.get('http://localhost:3000/api/' + id)
+        axios.get('http://localhost:8000/api/' + id)
             .then(res => {
                 setInfo(res.data)
                 setImage(res.data.photof)
@@ -34,14 +34,14 @@ function Edit() {
         formState: { errors },
     } = useForm({
         defaultValues: async () => {
-            let response = await axios.get('http://localhost:3000/api/' + id)
+            let response = await axios.get('http://localhost:8000/api/' + id)
             return response.data
         }
 
     })
 
     const onSubmit = (obj) => {
-        axios.patch('http://localhost:3000/api/' + id, {...obj, photo : image})
+        axios.patch('http://localhost:8000/api/' + id, {...obj, photo : image})
 
     }
 

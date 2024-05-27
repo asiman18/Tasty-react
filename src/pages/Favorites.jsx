@@ -6,13 +6,13 @@ function Favorites() {
     const [info, setInfo] = useState([]);
 
     useEffect(() => {
-        axios.get('http://localhost:3000/favorites/')
+        axios.get('http://localhost:8000/favorites/')
             .then(res => setInfo(res.data))
             .then(err => console.error(err));
     }, []);
 
     const handleDelete = (id) => {
-        axios.delete(`http://localhost:3000/favorites/${id}`)
+        axios.delete(`http://localhost:8000/favorites/${id}`)
             .then(res => {
                 setInfo(info.filter(element => element.id !== id));
             })

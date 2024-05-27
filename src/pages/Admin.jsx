@@ -12,7 +12,7 @@ function Admin() {
     const [change, setChange] = useState('ney')
 
     useEffect(() => {
-        axios.get('http://localhost:3000/api/').then(res => setInfo(res.data))
+        axios.get('http://localhost:8000/api/').then(res => setInfo(res.data))
     }, [deleteToggle])
 
     const filteredInfo = info.filter(element => {
@@ -27,7 +27,7 @@ function Admin() {
         const aValue = a.price;
         const bValue = b.price;
         if (change === 'inc') {
-            return  Number(aValue) - Number(bValue);
+            return Number(aValue) - Number(bValue);
         } else if (change === 'dec') {
             return Number(bValue) - Number(aValue);
         } else {
@@ -48,7 +48,7 @@ function Admin() {
                 <option value="year">Year</option>
                 <option value="price">Price</option>
             </select>
-            <select value={change} onChange={(e)=>setChange(e.target.value)} style={{display: 'flex'}}>
+            <select value={change} onChange={(e) => setChange(e.target.value)} style={{ display: 'flex' }}>
                 <option value="ney">Neytarl</option>
                 <option value="inc">Artan</option>
                 <option value="dec">Azalan</option>
@@ -71,4 +71,3 @@ function Admin() {
 }
 
 export default Admin
-

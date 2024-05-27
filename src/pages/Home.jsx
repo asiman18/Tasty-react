@@ -10,11 +10,11 @@ function Home() {
   const [favorites, setFavorites] = useState([]);
 
   useEffect(() => {
-    axios.get('http://localhost:3000/api/')
+    axios.get('http://localhost:8000/api/')
       .then(res => setInfo(res.data))
       .then(err => console.error(err));
 
-    axios.get('http://localhost:3000/favorites/')
+    axios.get('http://localhost:8000/favorites/')
       .then(res => setFavorites(res.data))
       .then(err => console.error(err));
   }, []);
@@ -23,15 +23,15 @@ function Home() {
     const isFavorite = favorites.some(fav => fav.id === id);
     
     if (isFavorite) {
-      axios.delete(`http://localhost:3000/favorites/${id}`)
+      axios.delete(`http://localhost:8000/favorites/${id}`)
         .then(() => {
 
           setFavorites(favorites.filter(fav => fav.id !== id));
         })
         .then(err => console.error(err));
     } else {
-      axios.get(`http://localhost:3000/api/${id}`)
-        .then(res => axios.post('http://localhost:3000/favorites/', res.data))
+      axios.get(`http://localhost:8000/api/${id}`)
+        .then(res => axios.post('http://localhost:8000/favorites/', res.data))
         .then(res => {
 
           setFavorites([...favorites, res.data]);
