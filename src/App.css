@@ -26,7 +26,7 @@ table{
   justify-content: space-around;
   align-items: center;
   box-shadow: 0 0 10px 3px rgba(0, 0, 0, 0.05);
-  background-color: #20c997;
+  background-color: rgb(53, 47, 47)
 }
 .nav__div{
   display: flex;
@@ -34,11 +34,13 @@ table{
   cursor: pointer;
 }
 .nav__div h4{
+  width: 70px;
+  height: 35px;
+  border: 2px solid white;
   display: flex;
   align-items: center;
   justify-content: center;
-  color: black;
-  font-size: 40px;
+  color: white;
 }
 .Text__ul{
   list-style-type: none;
@@ -51,5 +53,86 @@ table{
   color: gray;
 }
 .Text__ul li:hover{
+  color: white;}
+
+
+.Header{
+  display: inline-block;
+  position: relative;
+  text-align: center;
+  width: 100%;
+  height: 700px;
+  background: url(https://preview.colorlib.com/theme/tasty/images/bg_1.jpg.webp);
+
+}
+.Header__button{
+  /* letter-spacing: ; */
+  width: 180px;
+  height: 60px;
+  cursor: pointer;
+  font-weight: 400;
+  margin-top: 380px;
+  font-family: "Muli", Arial, sans-serif;
+  color: white;
+  background-color: transparent;
+  border: 2px solid white;
+  font-family: "Muli", Arial, sans-serif;
+  font-size: 16px;
+}
+.Header__button:hover{
+  background-color: white;
+  color: black;
+}
+.Header__div{
+  width: 80%;
+  height: 140px;
+  background-color: #FFB400;
+  position: absolute;
+  top: 560px;
+  left: 140px;
+}
+.Div__button{
+  width: 110px;
+  height: 40px;
+  border: transparent;
+  font-family: "Muli", Arial, sans-serif;
+}
+.Div__button:hover{
+  border: 2px solid white;
+  color: white;
+  background-color: transparent;
+}
+
+.Header__form :nth-child(1){
+  padding: 15px 20px;
+  background-color: transparent;
+  border: 1px solid black;
+}
+.Header__form :nth-child(2){
+  padding: 15px 20px;
+  background-color: transparent;
+  border: 1px solid black;
+}
+.Header__form :nth-child(3){
+  padding: 15px 20px;
+  background-color: transparent;
+  border: 1px solid black;
+}
+.Header__form :nth-child(4){
+  padding: 15px 20px;
+  background-color: transparent;
+  border: 1px solid black;
+}
+.Header__form :nth-child(5){
+  padding: 15px 20px;
+  background-color: transparent;
+  border: 1px solid black;
+}
+.directior{
+  text-decoration: none;
+  color: gray;
+
+}
+.directior:hover{
   color: white;
 }
